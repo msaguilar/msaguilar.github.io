@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 
+		Template HTML para renderizar aplicativos en Flash
+		@author, Edgar Fernando Carvajal Ulloa <efcu93@gmail.com>, <efcarvaj@espol.edu.ec>
+		{@link fercarvo.github.io}
+		
+		Todos los derechos reservados a Maria Stephany Aguilar Inga <stephanyaguilar3595@gmail.com>
+		<stephanyaguilar3595@hotmail.com>
+		
+		Tesis para la obtención del titulo en Lic. Gestion Grafica Publicitaria
+	-->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel='shortcut icon' type='image/x-icon' href='zaboo_favicon.ico' />
+	<title>Tesis Stephany Aguilar | Zaboo, aprendamos a leer</title>
+</head>
+<body style="margin: 0px; height: 100%; width: 100%; text-align: center; overflow: hidden; background-color: black;">
+	<style type="text/css">
+		#frame {
+			text-align: center;
+		}
+	</style>
+	<object id="frame" type="application/x-shockwave-flash"  data="Zaboo_AguilarPLAY.swf";">
+	</object>
+	
+	<script type="text/javascript">
+		/**
+		* JS Code
+		* @author, Edgar Fernando Carvajal Ulloa <efcu93@gmail.com>, <efcarvaj@espol.edu.ec>
+		* {@link fercarvo.github.io}
+		*
+		* Todos los derechos reservados a Maria Stephany Aguilar Inga <stephanyaguilar3595@gmail.com>
+		* <stephanyaguilar3595@hotmail.com>
+		*
+		* Tesis para la obtención del titulo en Lic. Gestion Grafica Publicitaria		
+		*/
+		size();
+
+		window.onresize = evt => size(evt);
+
+		function size (e) {
+			var width = window.innerWidth || document.body.clientWidth;
+			var height = window.innerHeight || document.body.clientHeight;
+
+			var style;
+
+			if (width*0.562225 > height) {
+				style = `width:${height*1.778645}px; height:${height}px;`
+			} else {
+				style = `width:${width}px; height:${width*0.562225}px;`
+			}
+
+			document.getElementById('frame').setAttribute('style', style)
+		}
+
+	</script>
+</body>
+</html>
