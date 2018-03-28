@@ -21,7 +21,7 @@
 			text-align: center;
 		}
 	</style>
-	<object id="frame" type="application/x-shockwave-flash" data="Zaboo.swf">
+	<object id="frame" type="application/x-shockwave-flash" data="Aguilar_Maria_FINAL.swf">
 	</object>
 	
 	<script type="text/javascript">
@@ -35,9 +35,17 @@
 		*
 		* Tesis para la obtención del titulo en Lic. Gestion Grafica Publicitaria		
 		*/
+		if (!(navigator.mimeTypes
+        	&& navigator.mimeTypes['application/x-shockwave-flash'] != undefined
+        	&& navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin)) {
+
+        	alert("Su navegador no posee Adobe Flash, o se encuentra inactivo")
+        	throw new Error("Su navegador no posee Adobe Flash, o se encuentra inactivo")
+    	}
+
 		size();
 
-		window.onresize = evt => size(evt);
+		window.onresize = function(evt) { size(evt) };
 
 		function size (e) {
 			var width = window.innerWidth || document.body.clientWidth;
